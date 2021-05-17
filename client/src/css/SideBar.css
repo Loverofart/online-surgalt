@@ -1,0 +1,115 @@
+.sidebar{
+  width: 20%;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+  padding-top: 30px;
+  padding-left: 2.5rem;
+}
+.sidebar a{
+  color: #333;
+}
+.sidebar .logo{
+  text-decoration: none;
+}
+
+.sidebar .logo img{
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+/* MENU */
+.sidebar .nav{
+  margin-top: 2rem;
+}
+.sidebar .nav li{
+  width: 100%;
+  height: 3rem;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.2rem;
+  border-left: 0.3rem transparent solid;
+}
+
+.sidebar .nav li a{
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 6px;
+}
+.sidebar .nav li a .icon{
+  margin-right: 0.5rem;
+}
+/* .sidebar .nav li a .lbl{
+  color: #848484;
+} */
+
+.sidebar .nav li.nav-item.active {
+  border-left: 0.3rem #ea5252 solid;
+  line-height: 1;
+  color: #ea5252;
+}
+.sidebar .nav li.nav-item.active.sHeading4{
+  font-weight: bold;
+  color: #ea5252;
+}
+
+/* LAst Watched Course */
+.sidebar .last-watched-course{
+  margin: 1.5rem 0;
+}
+.sidebar .last-watched-course .icon{
+  background: #ea5252;
+  color: white;
+  padding: 15px;
+  border-radius: 22px;
+  margin-right: 10px;
+}
+
+.sidebar .stats{
+  margin: 3rem 0rem;
+}
+.sidebar .stats .stats-box{
+  flex-direction: column;
+  width: 110px;
+}
+.sidebar .stats .stats-box .icon{
+  margin-bottom: 15px;
+}
+.sidebar .stats .stats-box .val{}
+.sidebar .stats .stats-box .lbl{}
+
+.sidebar .me{
+}
+.sidebar .me .photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-right: 10px;
+  background: #eee;
+}
+.sidebar .me .photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.sidebar .me .lbl{}
+
+.count-tag {
+  position:relative;
+  border: 0.1rem solid #ccc;
+  /* border-color: transparent transparent transparent #ccc; */
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.3rem;
+  background: #ccc;
+}
+
+
+.logout-section {
+  padding: 2rem 0;
+}
+
+.logout-section .logout .logout-icon {
+  margin-left: 1rem;
+}

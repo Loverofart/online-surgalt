@@ -1,0 +1,47 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+}
+button{
+  outline: none;
+  cursor: pointer;
+}
+select, textarea, input{
+  outline: none;
+}
+.flex{display:flex;}
+
+.fixed{position: fixed;}
+.abs{position: absolute;}
+.rel{position: relative;}
+.bl {display: block;}
+
+.noul{text-decoration: none;}
+.aic{align-items: center;}
+.jic{justify-content: center;}
+.c333{color: #333;}
+.c777{color: #777;}
+.cfff{color: #fff;}
+.gray{color: #848484;}
+.s13{font-size: 13px;}
+.s15{font-size: 15px;}
+.s18{font-size: 18px;}
+.s20{font-size: 16px;}
+.s24{font-size: 20px;}
+.sHeading4{font-size: 1.1rem;}
+
+.fontb{
+  font-weight: bold;
+}
