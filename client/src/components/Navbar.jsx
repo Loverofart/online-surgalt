@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { ReactComponent as LogoIcon } from "../assets/logo.svg";
+import React, { useState, useEffect } from "react"
+import { Link, useHistory } from 'react-router-dom'
+import styled from "styled-components"
+import { ReactComponent as LogoIcon } from "../assets/logo.svg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,9 @@ const Navbar = () => {
         </Hamburger>
         <Menu isOpen={isOpen}>
           <LinkWrapper>
-            <MenuLink href="">Хайх</MenuLink>
-            <MenuLink href="">Нэвтрэх</MenuLink>
-            <Button>Бүртгүүлэх</Button>
+            <MenuLink href="">Сагс</MenuLink>
+            <MenuLink href="/register">Нэвтрэх</MenuLink>
+            <Link to="/login"><Button to="/register">Бүртгүүлэх</Button></Link>
           </LinkWrapper>
         </Menu>
       </Container>
@@ -37,7 +38,6 @@ const Button = styled.button`
   border-radius: 1rem;
   box-shadow: 0px 13px 24px -7px #ecb6d7;
   transition: all 0.3s ease-in-out;
-  margin-left: 0.5rem;
   cursor: pointer;
   &:hover {
     box-shadow: 0px 17px 16px -11px #ecb6d7;
@@ -53,7 +53,6 @@ const MenuLink = styled.a`
   text-decoration: none;
   color: #858586;
   font-size: 1rem;
-  padding: 0.7rem 1.5rem;
   transition: all 0.2s ease-in;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -80,7 +79,7 @@ const Container = styled.div`
     text-decoration: none;
     color: #858586;
     font-size: 1rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 0 0.7rem 2.5rem;
     transition: all 0.2s ease-in;
     border-radius: 0.5rem;
     font-weight: 500;

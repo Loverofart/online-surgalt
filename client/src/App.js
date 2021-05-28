@@ -50,6 +50,7 @@ function App() {
         {store.isAuthenticated ? <SideBar /> : null}
         <Switch>
           <Route exact path='/' component={HomePage} />
+          <Route exact path='/login' component={LoginPage} />
           <Route exact path='/register' component={RegisterPage} />
           <Route exact path="/forgotPassword" component={ForgotPassword} />
           <Route exact path="/home" component={Home} />

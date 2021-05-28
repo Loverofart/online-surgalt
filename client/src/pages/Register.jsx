@@ -38,7 +38,7 @@ const Register = () => {
         <div className="container">
             <div className="row mt-5">
                 <div className="col-md-4 m-auto">
-                    <h1 className="display-4 text-center">USER</h1>
+                    <h1 className="display-4 text-center">Шинэ Хэрэглэгчийн Бүртгэл</h1>
                     <form noValidate onSubmit={formSubmitHandler} >
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email</label>
@@ -50,7 +50,7 @@ const Register = () => {
                             {errors.email && (<div className="invalid-feedback">{errors.email}</div>)} 
                         </div>
                         <div className="form-group">
-                            <label htmlFor="exampleInputEmail2">Name</label>
+                            <label htmlFor="exampleInputEmail2">Нэр</label>
                             <input onChange={(e) => setName(e.target.value)} type="text"  value={name} id="exampleInputEmail2" className={classnames("form-control",
                                 {
                                     'is-invalid': errors.name
@@ -80,7 +80,7 @@ const Register = () => {
                        
                     </form>
                     <div className="mt-3">
-                        <Link to="/">Нэвтрэх</Link>
+                        <Link to="/login">Нэвтрэх</Link>
                     </div>
                 </div>
             </div>
