@@ -17,8 +17,8 @@ const Navbar = () => {
         <Menu isOpen={isOpen}>
           <LinkWrapper>
             <MenuLink href="">Сагс</MenuLink>
-            <MenuLink href="/register">Нэвтрэх</MenuLink>
-            <Link to="/login"><Button to="/register">Бүртгүүлэх</Button></Link>
+            <MenuLink href="/login">Нэвтрэх</MenuLink>
+            <Link to="/register"><Button>Бүртгүүлэх</Button></Link>
           </LinkWrapper>
         </Menu>
       </Container>
