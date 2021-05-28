@@ -21,10 +21,11 @@ const Home = () => {
     }, [store.allCourse])
     return (
         <>
-            <div className="container" style={{ marginTop: "100px" }}>
+            <div className="container" style={{ marginTop: "30px" }}>
                 <div className="row">
-
-
+                    <div className="page-title">
+                        <h1>Бүх Сургалтууд</h1>
+                    </div>
                 </div>
                 <div className="row">
                     <div className="row justify-content-center">

@@ -1,10 +1,19 @@
 .App{
   padding: 0 0 0 0;
-}
-
+  background: rgb(251,252,254);
+  }
 .container {
-  width: 80%;
-  margin-left: 20%;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  color: rgb(49,56,123)
+}
+.rightside{
+  margin: 1.5% 1.5% 1.5% 22%;
+  width: 100%;
+  min-height: 760px;
+  border-radius: 1.5rem;
 }
 
 .MuiCard-root {
@@ -17,4 +26,29 @@ body {
 
 button {
   font-family: "Raleway", sans-serif;
+}
+
+.page-title {
+  padding-left: 3rem;
+}
+
+/* CArd */
+.card {
+  border-radius: 2rem;
+}
+.card .card-body .card-txt{
+  margin-top: 0.3rem;
+}
+.card .card-body .card-img{
+  
+}
+
+.card-img, .card-img-bottom {
+    border-bottom-right-radius: calc(3.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: calc(1.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
 }

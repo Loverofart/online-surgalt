@@ -48,19 +48,25 @@ function App() {
       <Router>
         {/* {store.isAuthenticated ? <Navbar /> : null} */}
         {store.isAuthenticated ? <SideBar /> : null}
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/login' component={LoginPage} />
-          <Route exact path='/register' component={RegisterPage} />
-          <Route exact path="/forgotPassword" component={ForgotPassword} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/addCourse" component={UploadVideos} />
-          <Route exact path="/cart" component={Cart} />
-          <Route exact path="/payment/:courseId" component={Payment} />
-          <Route exact path="/myCourses" component={MyCourses} />
-          <Route exact path="/courseDetails/:courseId" component={CourseDetails} />
-          <Route exact path="/profile" component={Profile} />
-        </Switch>
+
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/login' component={LoginPage} />
+            <Route exact path='/register' component={RegisterPage} />
+            <Route exact path="/forgotPassword" component={ForgotPassword} />
+            
+            <div className="rightside">
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/addCourse" component={UploadVideos} />
+              <Route exact path="/cart" component={Cart} />
+              <Route exact path="/payment/:courseId" component={Payment} />
+              <Route exact path="/myCourses" component={MyCourses} />
+              <Route exact path="/courseDetails/:courseId" component={CourseDetails} />
+              <Route exact path="/profile" component={Profile} />
+            </div>
+          </Switch>
+
+        
       </Router>
     </div>
   );

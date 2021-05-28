@@ -39,14 +39,18 @@ const SideBar = () => {
 
     return (     
       <div className="sidebar fixed">
-          <a href="#" className="logo c333">
-            <img src={logo} className="" />
+          {/* <a href="#" className="logo c333">
+            <FeatherIcon icon="book-open"className="icon s20"/>
             <span className="aic logo-title s24">
               <Link to="/home">Нүүр</Link>
             </span>
-          </a>
+          </a> */}
 
           <ul className="nav">
+            <li className="nav-item active sHeading4">
+                <FeatherIcon icon="home"className="icon s20"/>
+                <Link to={`/home`}>Нүүр</Link>
+            </li>
             <li className="nav-item active sHeading4">
                 <FeatherIcon icon="book-open"className="icon s20"/>
                 <Link to={`/profile`}>{name}</Link>
