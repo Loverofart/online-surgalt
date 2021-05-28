@@ -1,66 +1,154 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { userLogout } from '../redux/actions/userAction'
-
+import React, { useState } from "react";
+import styled from "styled-components";
+import { ReactComponent as LogoIcon } from "../assets/logo.svg";
 
 const Navbar = () => {
-    const user = useSelector(store => store.userRoot.user)
-    const history = useHistory()
-    const [name, setName] = useState("")
-    const [cartLength, setCartLength] = useState(0)
-    const [courseLength, setCourseLength] = useState(0)
-    const dispatch = useDispatch()
-    const logoutHandler = () => {
-        dispatch(userLogout())
-        history.push('/')
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Nav>
+      <Container>
+        <LogoIcon />
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+        <Menu isOpen={isOpen}>
+          <LinkWrapper>
+            <MenuLink href="">Хайх</MenuLink>
+            <MenuLink href="">Нэвтрэх</MenuLink>
+            <Button>Бүртгүүлэх</Button>
+          </LinkWrapper>
+        </Menu>
+      </Container>
+    </Nav>
+  );
+};
+
+export default Navbar;
+
+// Login button
+const Button = styled.button`
+  font-size: 0.9rem;
+  background: #f774c5;
+  border: none;
+  padding: 0.8rem 1.1rem;
+  color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 13px 24px -7px #ecb6d7;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 17px 16px -11px #ecb6d7;
+    transform: translateY(-5px);
+  }
+  @media (max-width: 670px) {
+    /* width: 100%; */
+    padding: 0.3;
+  }
+`;
+
+const MenuLink = styled.a`
+  text-decoration: none;
+  color: #858586;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  transition: all 0.2s ease-in;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  &:hover {
+    color: #7781d4;
+    background: #e7e9fc;
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  padding: 2rem;
+  svg {
+    height: 1.4rem;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: #858586;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.2s ease-in;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    &:hover {
+      color: #7781d4;
+      background: #e7e9fc;
     }
-  
-    useEffect(() => {
-        if (user.name) {
-            setName(user.name)
-        }  
-    }, [user])
-    useEffect(() => {
-        if (user.cart) {
-            setCartLength(user.cart.length)
-        }
-    }, [user])
-    useEffect(() => {
-        if (user.coursesBought) {
-            setCourseLength(user.coursesBought.length)
-        }
-    }, [user])
- 
+  }
+`;
 
-    return (
-        <div className="container-fluid">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <h4 className="navbar-brand mt-1" >
-                    <Link to="/home">Нүүр</Link>
-                </h4>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <button type="button" className="btn"><Link to={`/profile`}><li>{name.toUpperCase()}</li></Link></button>
-                        </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn"><Link to="/addCourse"><li>Хичээл заах</li></Link></button>
-                        </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn"><Link to="/myCourses"><li>Хичээл үзэх{courseLength} </li></Link></button>
-                        </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn"><Link to="/cart"><li>Сагс {cartLength} </li></Link></button>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <button style={{ listStyle: "None" }} onClick={logoutHandler} type="button" className="btn"><li>Гарах</li></button>
-                </div>
-            </nav>
-        </div>
-    )
-}
+const Nav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+`;
 
-export default React.memo(Navbar)
+const Menu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @media (max-width: 768px) {
+    background-color: rgba(255, 255, 255, 0.9);
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      -webkit-backdrop-filter: blur(35px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: -4px 8px 15px 1px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    flex-direction: column;
+    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+    transition: max-height 0.3s ease-in;
+    width: 100%;
+  }
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const Hamburger = styled.div`
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  span {
+    height: 2px;
+    width: 25px;
+    background: #f774c5;
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;

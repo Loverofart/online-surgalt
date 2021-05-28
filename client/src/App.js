@@ -7,12 +7,12 @@ import setAuthToken from './redux/helper/setAuthToken'
 import store from './redux/store'
 
 //Components
+import HomePage from './components/HomePage'
 import RegisterPage from './pages/Register'
 import LoginPage from './pages/Login'
 import ForgotPassword from './pages/ForgotPassword'
 import Home from './pages/Home'
 import Cart from './pages/Admin/Cart'
-import Navbar from './components/Navbar'
 import SideBar from './components/SideBar'
 import Payment from './pages/Admin/Payment'
 import MyCourses from './pages/Admin/MyCourses'
@@ -49,7 +49,7 @@ function App() {
         {/* {store.isAuthenticated ? <Navbar /> : null} */}
         {store.isAuthenticated ? <SideBar /> : null}
         <Switch>
-          <Route exact path='/' component={LoginPage} />
+          <Route exact path='/' component={HomePage} />
           <Route exact path='/register' component={RegisterPage} />
           <Route exact path="/forgotPassword" component={ForgotPassword} />
           <Route exact path="/home" component={Home} />

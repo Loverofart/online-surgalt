@@ -6,3 +6,15 @@
   width: 80%;
   margin-left: 20%;
 }
+
+.MuiCard-root {
+  margin: auto;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+}
