@@ -31,7 +31,7 @@ const CourseDetails = (props) => {
                         
                     </>}
                 </div> */}
-                <div className="col-md-11" style={{ margin: "auto" }}>
+                <div className="col-md-11" style={{ marginLeft: "1rem" }}>
                     <div class="qna-container">
                         <div className="qna-header">
                             <h3>Форум</h3>

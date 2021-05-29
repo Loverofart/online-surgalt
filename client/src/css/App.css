@@ -164,7 +164,7 @@ button {
   background-color: white;
   box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
   padding: 0 2.5rem 2.5rem 2.5rem;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 
 .qna-container .qna-header {
