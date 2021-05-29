@@ -6,16 +6,19 @@ const Profile = () => {
     const user = useSelector(store => store.userRoot.user)
 
     return (
-        <div className="container" style={{ marginTop: "100px" }}>
-            <div className="row">
+        <div className="container" style={{ marginTop: "60px" }}>
+            <div className="page-title" style={{marginBottom:"1rem"}}>
+                <h3>МИНИЙ БҮРТГЭЛ</h3>
+            </div>
+            <div className="row profile-row">
                 {console.log("as", user)}
-                <div className="col-md-6">
-                    <h2>Нэр: {user.name}</h2>
-                    <h2>Email: {user.email}</h2>
-                    <h2>Явуулж буй сургалтууд: {user.coursesCreated && user.coursesCreated.length} </h2>
-                    <h2>Нийт орлого: {user.totalIncome}₮</h2>
-                    <h2>Миний худалдаж авсан хичээл: {user.coursesBought && user.coursesBought.length} </h2>
-                    <h2>Зарцуулсан мөнгө: {user.totalExpenditure}₮</h2>
+                <div className="col-md-8">
+                    <h5>Нэр: {user.name}</h5>
+                    <h5>Email: {user.email}</h5>
+                    <h5>Явуулж буй сургалтууд: {user.coursesCreated && user.coursesCreated.length} </h5>
+                    <h5>Нийт орлого: {user.totalIncome}₮</h5>
+                    <h5>Миний худалдаж авсан хичээл: {user.coursesBought && user.coursesBought.length} </h5>
+                    {/* <h2>Зарцуулсан мөнгө: {user.totalExpenditure}₮</h2> */}
                     
                     {user.coursesCreated.length !== 0 && 
                         user.coursesCreated.map(obj =>

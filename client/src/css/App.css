@@ -225,3 +225,12 @@ button {
   font-size: 0.9rem;
   color: white;
 }
+
+/* PRofile */
+.profile-row{
+  margin-left: 2rem;
+  background-color: white;
+  width: 90%;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 1.8rem;
+}
