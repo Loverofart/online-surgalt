@@ -15,14 +15,14 @@ const VideoPlayer = (props) => {
             <video width="400" controls>
                 <source src={props.course.file} type="video/mp4" />
             </video>
-            <h4 class="card-title"><strong>Title: </strong>{props.course.title}</h4>
-            <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{props.course.duration} мин</h5>
-            <h5 class="card-title"><strong>Төрөл: </strong> {props.course.category}</h5> 
+            <h4 class="card-title"><strong>Гарчиг: </strong>{props.course.title}</h4>
+            {/* <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{props.course.duration} мин</h5>
+            <h5 class="card-title"><strong>Төрөл: </strong> {props.course.category}</h5>  */}
             <Link to={`/courseQna/${props.course._id}`}>QNA </Link>
             <textarea onChange={(e) => setMessage(e.target.value)} type="text" value={message} id="exampleInputPassword1"
                 className="form-control"
                      />
-            <button onClick={clickHandler} type="button" className="btn btn-info">Ask Question</button>
+            <button onClick={clickHandler} type="button" className="btn btn-info">Асуулт & Хариулт</button>
         </div>
     )
 }

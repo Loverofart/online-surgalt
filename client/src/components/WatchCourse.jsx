@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import {courseDetailsById} from '../../redux/actions/userAction'
-// import VideoPlayer from '../../components/VideoPlayer'
+import {courseDetailsById} from '../redux/actions/userAction'
+import VideoPlayer from './VideoPlayer'
 import { Link } from 'react-router-dom'
 
-const CourseQna = (props) => {
+const WatchCourse = (props) => {
     const dispatch = useDispatch()
     const singleCourse = useSelector(store=>store.courseRoot.singleCourse)
     const [course, setCourse] = useState({})
@@ -21,16 +21,14 @@ const CourseQna = (props) => {
     return (
         <div className="container">
             <div className="row">
-                {/* <div className="col-md-6">
-                    {course.file && <><video width="100%" controls>
+                <div className="col-md-6">
+                    <VideoPlayer key={course._id} course={course}  />
+                    {/* {course.file && <><video width="100%" controls>
                         <source src={course.file} type="video/mp4" />
                     </video>
                         <h4 class="card-title"><strong>Гарчиг: </strong>{course.title}</h4>
-                        <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{course.duration} мин</h5>
-                        <h5 class="card-title"><strong>Төрөл: </strong> {course.category}</h5>
-                        
-                    </>}
-                </div> */}
+                    </>} */}
+                </div>
                 <div className="col-md-11" style={{ marginLeft: "1rem" }}>
                     <div class="qna-container">
                         <div className="qna-header">
@@ -51,4 +49,4 @@ const CourseQna = (props) => {
     )
 }
 
-export default CourseQna
+export default WatchCourse

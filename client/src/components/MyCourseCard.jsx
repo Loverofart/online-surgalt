@@ -47,7 +47,10 @@ const MyCourseCard = (props) => {
                     </ul>
                 </div>
                 <div class="gowatch">
-                  <Link to={`/courseQna/${props.course._id}`} className="btn btn-gowatch">
+                  {/* <Link to={`/courseQna/${props.course._id}`} className="btn btn-gowatch">
+                    <FeatherIcon icon="play"className="gowatch-icon" width="34" height="34" stroke="white"/>
+                  </Link> */}
+                  <Link to={`/watchCourse/${props.course._id}`} className="btn btn-gowatch">
                     <FeatherIcon icon="play"className="gowatch-icon" width="34" height="34" stroke="white"/>
                   </Link>
                 </div>

@@ -54,7 +54,7 @@ const Card = (props) => {
                     </div>
                     
                     {store.user._id !== props.course.createdBy._id ? <button disabled={isDisabled} onClick={addToCartClickHandler} className="btn btn-info btn-block">{isDisabled ? "Сагсанд нэмэгдсэн" : "Сагсанд нэмэх"} </button>
-                        : <Link to={`/courseQna/${props.course._id}`} className="btn btn-info btn-block">Үзэх </Link>}
+                        : <Link to={`/watchCourse/${props.course._id}`} className="btn btn-info btn-block">Үзэх </Link>}
                 </div>
             </div>
         </div>
