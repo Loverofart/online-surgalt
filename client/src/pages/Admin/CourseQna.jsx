@@ -19,7 +19,7 @@ const CourseDetails = (props) => {
         }
     },[singleCourse])
     return (
-        <div className="container" style={{ marginTop: "100px" }}>
+        <div className="container">
             <div className="row">
                 {/* <div className="col-md-6">
                     {course.file && <><video width="100%" controls>
@@ -31,13 +31,20 @@ const CourseDetails = (props) => {
                         
                     </>}
                 </div> */}
-                <div className="col-md-6">
-                    <h1>Форум</h1>
-                    {course.qna && course.qna.map(obj =>
-                        <>
-                            <h3>{obj.sender}: {obj.message}</h3>
-                            </>
-                        )}
+                <div className="col-md-11" style={{ margin: "auto" }}>
+                    <div class="qna-container">
+                        <div className="qna-header">
+                            <h3>Форум</h3>
+                        </div>
+                        <div className="qna-chats">
+                            {course.qna && course.qna.map(obj =>
+                            <>
+                                <p><strong>{obj.sender}:</strong> {obj.message}</p>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

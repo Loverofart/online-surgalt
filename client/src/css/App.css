@@ -13,9 +13,9 @@
 }
 
 
-h1 {
+/* h1 {
   color: rgb(49,56,123);
-}
+} */
 .rightside{
   margin: 1.5% 1.5% 1.5% 22%;
   width: 100%;
@@ -157,4 +157,21 @@ button {
   justify-content: center;
   text-align: right;
   padding: 2.5rem;
+}
+
+/* QNA */
+.qna-container{
+  background-color: white;
+  box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  border-radius: 1rem;
+}
+
+.qna-container .qna-header {
+  padding:0.8rem 0 0.2rem 0;
+  border-bottom: 1px solid #e1dada;
+}
+
+.qna-container .qna-chats{
+  margin-top: 1rem;
 }
