@@ -24,7 +24,7 @@ const Home = () => {
             <div className="container" style={{ marginTop: "30px" }}>
                 <div className="row">
                     <div className="page-title">
-                        <h1>Бүх Сургалтууд</h1>
+                        <h2>БҮХ СУРГАЛТУУД</h2>
                     </div>
                 </div>
                 <div className="row">

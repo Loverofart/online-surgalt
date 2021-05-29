@@ -18,7 +18,7 @@ const VideoPlayer = (props) => {
             <h4 class="card-title"><strong>Title: </strong>{props.course.title}</h4>
             <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{props.course.duration} мин</h5>
             <h5 class="card-title"><strong>Төрөл: </strong> {props.course.category}</h5> 
-            <Link to={`/courseDetails/${props.course._id}`}>QNA </Link>
+            <Link to={`/courseQna/${props.course._id}`}>QNA </Link>
             <textarea onChange={(e) => setMessage(e.target.value)} type="text" value={message} id="exampleInputPassword1"
                 className="form-control"
                      />

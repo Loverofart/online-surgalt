@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import VideoPlayer from '../../components/VideoPlayer'
-import { allCourses, myCourses } from '../../redux/actions/userAction'
+import VideoPlayer from './VideoPlayer'
+import { allCourses, myCourses } from '../redux/actions/userAction'
+import Card from './MyCourseCard'
 
 
 const MyCourses = () => {
@@ -21,15 +22,25 @@ const MyCourses = () => {
     
     
     return (
-        <div className="container" style={{marginTop:"100px"}}>
+        <div className="container" style={{marginTop:"30px"}}>
             <div className="row">
-                <div className="col">
+                <div className="page-title">
+                    <h2>МИНИЙ СУРГАЛТУУД</h2>
+                </div>
+            </div>
+            <div className="row my-course-list">
+                {/* <div className="col">
                     
                     {arr.length !== 0 && arr.map((course, index)=>
                        <VideoPlayer key={index} course={course}  />
                     )}
                     
-                </div>
+                </div> */}
+                    {arr.length !== 0 && arr.map((data, index)=>
+                    //    <VideoPlayer key={index} course={course}  />
+                       <Card key={index} course={data} />
+                    )}
+
             </div>
         </div>
     )

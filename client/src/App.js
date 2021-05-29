@@ -15,8 +15,8 @@ import Home from './pages/Home'
 import Cart from './pages/Admin/Cart'
 import SideBar from './components/SideBar'
 import Payment from './pages/Admin/Payment'
-import MyCourses from './pages/Admin/MyCourses'
-import CourseDetails from './pages/Admin/CourseDetails'
+import MyCourses from './components/MyCourses'
+import CourseDetails from './pages/Admin/CourseQna'
 import Profile from './pages/Admin/Profile'
 
 //Admin
@@ -61,7 +61,7 @@ function App() {
               <Route exact path="/cart" component={Cart} />
               <Route exact path="/payment/:courseId" component={Payment} />
               <Route exact path="/myCourses" component={MyCourses} />
-              <Route exact path="/courseDetails/:courseId" component={CourseDetails} />
+              <Route exact path="/courseQna/:courseId" component={CourseDetails} />
               <Route exact path="/profile" component={Profile} />
             </div>
           </Switch>

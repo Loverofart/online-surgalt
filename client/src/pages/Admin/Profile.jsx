@@ -26,7 +26,7 @@ const Profile = () => {
                                 <h4 class="card-title"><strong>Гарчиг: </strong>{obj.title}</h4>
                                 <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{obj.duration} мин</h5>
                                 <h5 class="card-title"><strong>Төрөл: </strong> {obj.category}</h5>
-                                <Link to={`/courseDetails/${obj._id}`}>Форум </Link>
+                                <Link to={`/courseQna/${obj._id}`}>Форум </Link>
                             </div>
                         )
                     }

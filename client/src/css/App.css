@@ -14,7 +14,7 @@
 
 
 h1 {
-  color: rgb(49,56,123)
+  color: rgb(49,56,123);
 }
 .rightside{
   margin: 1.5% 1.5% 1.5% 22%;
@@ -37,7 +37,9 @@ button {
 }
 
 .page-title {
-  padding-left: 3rem;
+  padding-left: 4rem;
+  color: #3f4143;
+  font-weight: bold;
 }
 
 /* CArd */
@@ -63,7 +65,7 @@ button {
   position: relative;
   top: 0.5rem;
   left: 1rem;
-  background: #f06083;
+  background: #ff8f03;
   color: white;
   font-size: 0.8rem;
   width: max-content;
@@ -95,9 +97,64 @@ button {
   background-color: #1875ab;
   border-color: transparent;
   font-size: 0.9rem;
+  border-radius: 1rem;
 }
 
 .btn-info:hover{
   background-color: #f06083;
+  /* background-color: #ff8f03; */
   border-color: transparent;
+}
+
+/* 
+*
+  MYCOURSE CARD 
+*
+*/
+.my-course-list {
+  width: 100%;
+  margin: 3rem;
+}
+.my-course-card {
+  width: 80%;
+  background-color: white;
+  box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
+  margin-bottom: 2rem;
+}
+.my-course-card .my-course-card-body .category-tag{
+  padding: 0.4rem 2.3rem;
+  background: #f3f3f3;
+  color: #757575;
+  font-weight: 600;
+}
+.btn-gowatch {
+  width: 5rem;
+  height: 5rem;
+  background-color: #1875ab;
+  border-radius: 5rem;
+}
+.gowatch-icon{
+  position: relative;
+  top: 0.9rem;
+  left: 0.2rem;
+}
+
+.card-main-content-centered{
+  display: flex;
+}
+
+.my-course-card .card-main-content-centered .card-txt{
+  width: 80%;
+  padding: 2.5rem 2.3rem;
+  color: #616161;
+}
+.my-course-card .card-main-content-centered .card-txt h3{ 
+  color: #1875ab;
+}
+
+.my-course-card .card-main-content-centered .gowatch{
+  width: 20%;
+  justify-content: center;
+  text-align: right;
+  padding: 2.5rem;
 }
