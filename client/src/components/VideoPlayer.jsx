@@ -11,18 +11,19 @@ const VideoPlayer = (props) => {
         setMessage("")
     }
     return (
-        <div class="card ml-5 my-3" style={{ width: "25rem", display: "inline-block" }}>
-            <video width="400" controls>
+        <div class="card video-card ml-3" style={{ width: "100%", display: "inline-block" }}>
+            {/* <h4 class="card-title"><strong>Гарчиг: </strong>{props.course.title}</h4> */}
+            <video width="100%" controls>
                 <source src={props.course.file} type="video/mp4" />
             </video>
-            <h4 class="card-title"><strong>Гарчиг: </strong>{props.course.title}</h4>
+            
             {/* <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{props.course.duration} мин</h5>
             <h5 class="card-title"><strong>Төрөл: </strong> {props.course.category}</h5>  */}
-            <Link to={`/courseQna/${props.course._id}`}>QNA </Link>
+            <Link to={`/courseQna/${props.course._id}`} style={{fontSize:"large", margin:"1rem"}}>QNA </Link>
             <textarea onChange={(e) => setMessage(e.target.value)} type="text" value={message} id="exampleInputPassword1"
                 className="form-control"
                      />
-            <button onClick={clickHandler} type="button" className="btn btn-info">Асуулт & Хариулт</button>
+            <button onClick={clickHandler} type="button" className="btn btn-qna">Илгээх</button>
         </div>
     )
 }

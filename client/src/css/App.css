@@ -158,7 +158,9 @@ button {
   text-align: right;
   padding: 2.5rem;
 }
-
+.course-title {
+  margin: 1rem;
+}
 /* QNA */
 .qna-container{
   background-color: white;
@@ -174,4 +176,52 @@ button {
 
 .qna-container .qna-chats{
   margin-top: 1rem;
+}
+
+/* WATCH VIDEO */
+.video-card {
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
+}
+.video-card video{
+  position: relative;
+  top: -0.1rem;
+}
+.course-contents{
+  background-color: white;
+  box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.course-contents .course-contents-header {
+  border-bottom: #e1dada 1px solid;
+  padding: 0.5rem 1rem;
+  color: #3e3e3e;
+  font-weight: 600;
+}
+.course-contents .course-contents-videos {
+  /* padding: 0 2rem; */
+}
+.course-contents-videos svg{
+  margin-right: 1rem;
+  position: relative;
+  top: 0.2rem;
+  left: 0.4rem;
+  width: 4%;
+}
+.course-contents-videos ul li{
+  display: flex;
+  padding: 0.5rem 0.8rem;
+  vertical-align: middle;
+}
+.course-contents-videos ul li.active{
+  background-color: #f3f3f3;
+}
+.btn-qna{
+  float: right;
+  background: #1875ab;
+  margin: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
 }
