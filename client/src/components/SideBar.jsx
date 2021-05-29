@@ -51,7 +51,7 @@ const SideBar = () => {
                 <FeatherIcon icon="home"className="icon s20"/>
                 <Link to={`/home`}>Нүүр</Link>
             </li>
-            <li className="nav-item active sHeading4">
+            <li className="nav-item sHeading4">
                 <FeatherIcon icon="book-open"className="icon s20"/>
                 <Link to={`/profile`}>{name}</Link>
             </li>

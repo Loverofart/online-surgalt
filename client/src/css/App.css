@@ -6,6 +6,13 @@
   padding: 0;
   margin: 0;
 }
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+  }
+}
+
+
 h1 {
   color: rgb(49,56,123)
 }
@@ -14,6 +21,7 @@ h1 {
   width: 100%;
   min-height: 760px;
   border-radius: 1.5rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .MuiCard-root {
@@ -35,20 +43,61 @@ button {
 /* CArd */
 .card {
   border-radius: 2rem;
+  border: 1px solid #0062cc2b;
+  box-shadow: 0 10px 20px -8px #81d1ff;
+  color: #0a2445;
+  font-size: 0.85rem;
+}
+.card svg{
+  width: 20px;
+  height: 20px;
+  margin-right: 0.2rem;
+}
+.card .card-body{
+  padding: 0;
 }
 .card .card-body .card-txt{
-  margin-top: 0.3rem;
+  margin: 0.5rem 1.2rem 1.2rem 1.2rem;
+}
+.card .category-tag{
+  position: relative;
+  top: 0.5rem;
+  left: 1rem;
+  background: #f06083;
+  color: white;
+  font-size: 0.8rem;
+  width: max-content;
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.8rem;
+  z-index: 2;
+}
+.card .card-body .card-txt .views-dur{
+  display: flex;
+  margin-bottom: 0.2rem;
 }
 .card .card-body .card-img{
-  
+  margin-top: -1.7rem;
+  z-index: 0;
 }
 
 .card-img, .card-img-bottom {
-    border-bottom-right-radius: calc(3.25rem - 1px);
+    border-bottom-right-radius: calc(2.25rem - 1px);
     border-bottom-left-radius: calc(.25rem - 1px);
 }
 
 .card-img, .card-img-top {
     border-top-left-radius: calc(1.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #1875ab;
+  border-color: transparent;
+  font-size: 0.9rem;
+}
+
+.btn-info:hover{
+  background-color: #f06083;
+  border-color: transparent;
 }

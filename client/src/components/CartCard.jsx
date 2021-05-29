@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const CartCard = (props) => {
     return (
-        <div class="card ml-5 my-3" style={{ width: "18rem", display: "inline-block" }}>
+        <div class="card ml-5 my-3" style={{ width: "17rem", display: "inline-block" }}>
             <div class="card-body">
                 <h4 class="card-title"><strong>{props.course.title}</strong></h4>
                 <h5 class="card-title"><strong>Үнэ: </strong>{props.course.price}$</h5>
