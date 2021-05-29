@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom'
 import {addToCart} from '../redux/actions/userAction'
-import FeatherIcon from 'feather-icons-react';
+import FeatherIcon from 'feather-icons-react'
 
 const Card = (props) => {
     const store = useSelector(store => store.userRoot)

@@ -14,7 +14,12 @@ const Cart = () => {
    
 
     return (
-        <div className="container" style={{ marginTop: "100px" }}>
+        <div className="container" style={{ marginTop: "30px" }}>
+            <div className="row">
+                <div className="page-title">
+                    <h1>Сагс</h1>
+                </div>
+            </div>
             <div className="row justify-content-center">
                
                 <div className="col">
