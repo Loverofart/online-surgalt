@@ -43,7 +43,7 @@ const Login = () => {
         <div className="container">
             <div className="row mt-5">
                 <div className="col-md-4 m-auto">
-                    <h1 className="display-4 text-center">Хэрэглэгч</h1>
+                    <h1 className="display-4 text-center">Нэвтрэх</h1>
                     <form noValidate onSubmit={formSubmitHandler} >
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email</label>

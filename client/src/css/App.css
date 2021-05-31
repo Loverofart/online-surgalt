@@ -80,6 +80,7 @@ button {
 .card .card-body .card-img{
   margin-top: -1.7rem;
   z-index: 0;
+  max-height: 178.5px;
 }
 
 .card-img, .card-img-bottom {
@@ -116,7 +117,7 @@ button {
   margin: 3rem;
 }
 .my-course-card {
-  width: 80%;
+  width: 95%;
   background-color: white;
   box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
   margin-bottom: 2rem;
@@ -144,16 +145,26 @@ button {
 }
 
 .my-course-card .card-main-content-centered .card-txt{
-  width: 80%;
+  width: 65%;
   padding: 2.5rem 2.3rem;
   color: #616161;
 }
 .my-course-card .card-main-content-centered .card-txt h3{ 
   color: #1875ab;
 }
-
-.my-course-card .card-main-content-centered .gowatch{
+.my-course-card .card-main-content-centered .download-pdf{
+  justify-content: center;
+  vertical-align: middle;
+  padding: 4rem 0;
   width: 20%;
+}
+.btn-download-pdf{
+  background-color: #1875ab;
+  color: white;
+  width: 95%;
+}
+.my-course-card .card-main-content-centered .gowatch{
+  width: 10%;
   justify-content: center;
   text-align: right;
   padding: 2.5rem;
@@ -180,6 +191,7 @@ button {
 
 /* WATCH VIDEO */
 .video-card {
+  height: 500px;
   border-radius: 0.3rem;
   margin-bottom: 1rem;
   box-shadow: rgb(31 31 31 / 12%) 0px 1px 6px, rgb(31 31 31 / 12%) 0px 1px 4px;
@@ -233,4 +245,9 @@ button {
   width: 90%;
   border: 1px solid rgba(0,0,0,.1);
   padding: 1.8rem;
+}
+
+.display-4{
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }

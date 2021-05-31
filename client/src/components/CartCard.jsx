@@ -16,13 +16,23 @@ const CartCard = (props) => {
     //     </div>
     // )
     return (
-        <div class="card ml-5 my-3" style={{ width: "17rem", display: "inline-block" }}>
+        <div class="card ml-5 my-3" style={{ width: "15rem", display: "inline-block" }}>
             <div class="card-body">
                 <div className="category-tag">
                     {/* <FeatherIcon icon="grid"className="icon s15"/> */}
                     <span>{props.course.category}</span>
                 </div>
-                <img class="card-img" src={require('../uploads/Freevector_Covid-19-Technology-Supporting-Technology_Illustration_Mf0321_generated.jpg')} />
+                {/* <img class="card-img" src={require('../uploads/Freevector_Covid-19-Technology-Supporting-Technology_Illustration_Mf0321_generated.jpg')} /> */}
+                {
+                    {
+                    'web-development': <img class="card-img" src={require('../uploads/thumbnail-1.jpg')} />,
+                    'cooking': <img class="card-img" src={require('../uploads/cooking.jpg')} />,
+                    'andriod-development': <img class="card-img" src={require('../uploads/thumbnail-2.jpg')} />,
+                    'meditation': <img class="card-img" src={require('../uploads/yoga.jpg')} />,
+                    'ui/ux-design': <img class="card-img" src={require('../uploads/ui-ux.jpg')} />,
+                    'graphic-design': <img class="card-img" src={require('../uploads/graphic-design.jpg')} />,
+                    }[props.course.category]
+                }
                 <div className="card-txt">
                     <h5><strong>{props.course.title}</strong></h5>
                     <span style={{ fontSize: "0.8rem"}}>Багш: <Link to={`/profile`}>{props.course.createdBy.name}</Link></span>

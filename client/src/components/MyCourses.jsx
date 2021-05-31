@@ -25,7 +25,7 @@ const MyCourses = () => {
         <div className="container" style={{marginTop:"30px"}}>
             <div className="row">
                 <div className="page-title">
-                    <h2>МИНИЙ СУРГАЛТУУД</h2>
+                    <h2>ҮЗЭЖ БУЙ СУРГАЛТУУД</h2>
                 </div>
             </div>
             <div className="row my-course-list">

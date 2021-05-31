@@ -8,7 +8,8 @@ const Navbar = () => {
   return (
     <Nav>
       <Container>
-        <LogoIcon />
+        {/* <LogoIcon /> */}
+        <h5><strong>Онлайн</strong>Сургалт</h5>
         <Hamburger onClick={() => setIsOpen(!isOpen)}>
           <span />
           <span />

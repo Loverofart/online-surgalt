@@ -41,7 +41,7 @@ export const userRegister = (userRegisterCredentials,history) => {
                 data: userRegisterCredentials
             })
             dispatch(registerLoaderFlagHelper(true))
-            history.push('/')
+            history.push('/login')
         }
         catch (err) {
             dispatch({
