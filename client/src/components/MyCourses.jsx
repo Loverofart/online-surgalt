@@ -19,8 +19,6 @@ const MyCourses = () => {
         }  
     },[user])
 
-    
-    
     return (
         <div className="container" style={{marginTop:"30px"}}>
             <div className="row">

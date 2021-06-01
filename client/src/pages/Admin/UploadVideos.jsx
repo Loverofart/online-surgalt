@@ -120,11 +120,11 @@ const UploadVideos = () => {
                             <label htmlFor="priceId">Үнэ</label>
                             <input value={price} onChange={(e) => setPrice(e.target.value)} type="number" className="form-control" />
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-1">
+                        <div className="row justify-content-center">
+                            <div className="col-md-1">
                                 {
-                                    isLoading && <div class="spinner-border text-primary" role="status">
-                                        <span class="sr-only">Уншиж байна...</span>
+                                    isLoading && <div className="spinner-border text-primary" role="status">
+                                        <span className="sr-only">Уншиж байна...</span>
                                     </div>
                                 }
                             </div>

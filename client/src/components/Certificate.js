@@ -45,7 +45,7 @@ const PDF = (props) => {
           </div>
       </div>
       <Pdf targetRef={ref} filename="certificate.pdf">
-        {({ toPdf }) => <button onClick={toPdf}>Татаж авах</button>}
+        {({ toPdf }) => <button className="btn btn-primary" onClick={toPdf} style={{marginTop: "1rem"}}>Татаж авах</button>}
       </Pdf>
     </>
   );
