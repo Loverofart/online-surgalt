@@ -36,5 +36,6 @@ router.get('/getCourseById/:courseId', passport.authenticate('jwt', { session: f
 
 router.post('/commentOnCourse/:courseId', passport.authenticate('jwt', { session: false }), commentOnQna)
 
+router.get('/getCertificate/:courseId', passport.authenticate('jwt', {session: false }), getCertificate)
 
 module.exports = router

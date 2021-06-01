@@ -8,7 +8,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan')
 
-//MIDDILWARES
+//MIDDLEWARES
 const app = express();
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json());

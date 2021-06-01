@@ -134,5 +134,4 @@ module.exports = {
             res.status(400).json({ 'Error in commentOnQna': err.message })
         }
     }
-   
 }

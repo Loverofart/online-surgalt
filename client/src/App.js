@@ -19,6 +19,7 @@ import MyCourses from './components/MyCourses'
 import WatchCourse from './components/WatchCourse'
 import CourseDetails from './pages/Admin/CourseQna'
 import Profile from './pages/Admin/Profile'
+import PDF from './components/Certificate'
 
 //Admin
 import UploadVideos from './pages/Admin/UploadVideos'
@@ -65,6 +66,7 @@ function App() {
               <Route exact path="/watchCourse/:courseId" component={WatchCourse} />
               <Route exact path="/courseQna/:courseId" component={CourseDetails} />
               <Route exact path="/profile" component={Profile} />
+              <Route exact path="/getCertificate/:courseId" component={PDF} />
             </div>
           </Switch>
 
