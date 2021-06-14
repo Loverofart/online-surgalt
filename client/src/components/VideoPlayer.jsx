@@ -2,21 +2,29 @@ import React, { useState, useEffect } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom'
 import {askQuestion} from '../redux/actions/userAction'
-
+import ResponsivePlayer from './ResponsivePlayer'
 const VideoPlayer = (props) => {
     const [message, setMessage] = useState("")
+    const [watchComplete, setWatchComplete]  = useState(false)
     const dispatch = useDispatch()
     const clickHandler = () => {
         dispatch(askQuestion(props.course._id, message))
         setMessage("")
     }
+    
+    const handleWatchComplete = ({ played }) => {
+        console.log(played)
+        // databased oruulah
+    }
     return (
         <div class="card video-card ml-3" style={{ width: "100%", display: "inline-block" }}>
             {/* <h4 class="card-title"><strong>Гарчиг: </strong>{props.course.title}</h4> */}
-            <video width="100%" controls>
+            {/* <video width="100%" controls>
                 <source src={props.course.file} type="video/mp4" />
-            </video>
-            
+            </video> */}
+            <ResponsivePlayer 
+                url={props.course.file}
+                onProgress={handleWatchComplete}/>
             {/* <h5 class="card-title"><strong>Үргэлжлэх хугацаа: </strong>{props.course.duration} мин</h5>
             <h5 class="card-title"><strong>Төрөл: </strong> {props.course.category}</h5>  */}
             <Link to={`/courseQna/${props.course._id}`} style={{fontSize:"large", margin:"1rem"}}>QNA </Link>

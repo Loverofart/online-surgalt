@@ -26,7 +26,7 @@ const WatchCourse = (props) => {
           </div>
             <div className="row">
                 <div className="col-md-6" style={{height: "520px"}}>
-                    <VideoPlayer key={course._id} course={course}  />
+                    <VideoPlayer key={course._id} course={course} />
                     {/* {course.file && <><video width="100%" controls>
                         <source src={course.file} type="video/mp4" />
                     </video>
